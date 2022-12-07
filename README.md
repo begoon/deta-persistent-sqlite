@@ -1,7 +1,7 @@
-# Persistent SQLite for <https://deta.sh>
+# Persistent SQLite for deta.sh
 
 An experimental project to make SQLite database persistent in the
-Django project deployed in <https://deta.sh>.
+Django project deployed as the [deta.sh](https://deta.sh) micro.
 
 The idea is to load the database file from Deta Drive when Django opens the database connection and then save the database file to Deta Drive when Django closes the connection.
 
@@ -105,4 +105,4 @@ or
 
     gunicorn wsgi:application --reload
 
-Note: when you run the project locally, Django takes the database from the current directory, not from `/tmp`.
+Note: when you run the project locally, Django takes the database from the current directory, not from `/tmp`. Also, don't forget to set the `DETA_PROJECT_KEY` variable in your environment.
